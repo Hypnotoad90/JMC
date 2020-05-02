@@ -258,3 +258,11 @@ map JMC31 "(AAC02) Around the world"
     sky1 = "STSKY10", 0.1
     intermusic = "d_aacint"
 }
+
+map JMC32 "Zandro Olympia 20XX"
+{
+    sky1 = stsky8, 0.2
+    music = D_JMX31
+    Intermusic = D_INTER7
+    next = JMC01
+}

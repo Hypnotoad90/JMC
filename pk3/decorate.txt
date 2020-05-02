@@ -1,0 +1,43 @@
+//===================== JMX =====================
+
+actor BRAN11 20026
+{
+  height 28
+  radius 14
+  +SOLID
+  states
+  {
+  Spawn:
+  BRA1 A -1
+  Stop
+  }
+}
+
+actor MekFish 1255
+{
+
+	+FLOAT
+    +NOTARGET
+	+NOGRAVITY
+	Monster
+	Health 500
+	Mass 5
+    Speed 8
+    Radius 32
+    Height 48
+
+    States
+    {
+    Spawn:
+        FISH A 1 A_Wander
+		FISH A 1 A_JumpIf(Waterlevel == 1, "Deepwater")
+		FISH A 1 A_JumpIf(waterlevel == 0, "Deepwater")
+        loop
+		
+		Deepwater:
+		FISH A 1 ThrustThingZ(0, 32, 1, 1)
+		Goto Spawn
+    }
+}
+
+//===================== JMX =====================
