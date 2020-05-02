@@ -1,0 +1,33 @@
+Tourney map list:
+MAP03: Race to the Top! - too short?
+MAP05: Storage Facility - remove doors? or keep them due to start lag?
+MAP07: The 30 Second Canyon
+MAP08: Up the Frozen River
+MAP11: Canyon Complex
+MAP19: Skulltag Olympia 2008 
+MAP22: Life of a Test Subject - remove doors
+MAP32: Precision Run
+MAP34: Junglefalls
+MAP35: Rage Maze
+MAP37: Volcano Escape - timed platforms at end but it adds drama at the end no?
+MAP38: Jumpmaze Circuit
+MAP40: Proteh's Chaos Base - remove doors, replace with key barriers?
+MAP41: Jump City
+MAP45: Durch Die Hölle Gehen - move start to hell section?
+MAP49: Kill Ratio - remove doors
+MAP51: Port Town
+MAP52: Vivid Dreams, Sweetheart
+MAP56: Red Hot Ride - remove doors
+MAP60: 40 Below Zero
+JPX03: Occupied Waters - remove teleport rng? 
+JPX12: Tunnel Trouble
+JPX14: Hot-Head Bop - remove bobbing?
+JPX15: Jumpenstein - end timer when key at the end has been got?
+JPX26: Pain and Agony - remove checkpoint
+JPX33: Lago Ypacarai
+JPX37: Mother Nature's Home
+LJM14: Hotlands
+LJM15: Hoots Of A Platformer (remove switch help)
+XNEO13: Valley Island
+AAC02 - remove doors, lower bridge
+JMX31 - add ranker scripts

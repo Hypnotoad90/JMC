@@ -1,0 +1,20 @@
+# Application-generated backup files
+*.bak
+*.dbs
+*.bak
+*.backup1
+*.backup2
+*.backup3
+
+# Compiled PK3s
+*.pk3
+out/
+debug/
+release/
+release_beta/
+
+# 7-Zip temporary files
+*.tmp
+
+# Compiled ACS
+*.o
