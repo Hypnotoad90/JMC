@@ -11,23 +11,23 @@ MAP34: Junglefalls
 MAP35: Rage Maze
 MAP37: Volcano Escape - timed platforms at end but it adds drama at the end no?
 MAP38: Jumpmaze Circuit
-MAP40: Proteh's Chaos Base - remove doors, replace with key barriers?
+MAP40: Proteh's Chaos Base - remove doors, replace with key barriers? NEW: make it tele rather than knockback
 MAP41: Jump City
 MAP45: Durch Die Hölle Gehen - move start to hell section?
 MAP49: Kill Ratio - remove doors
 MAP51: Port Town
-MAP52: Vivid Dreams, Sweetheart
-MAP56: Red Hot Ride - remove doors
+MAP52: Vivid Dreams, Sweetheart - NEW: remove bfg10k
+MAP56: Red Hot Ride - remove doors. NEW: make lift raise from lower, remove chaingun
 MAP60: 40 Below Zero
-JPX03: Occupied Waters - remove teleport rng? 
+JPX03: Occupied Waters - remove teleport rng, NEW: make it high again, remove secret exit
 JPX12: Tunnel Trouble
 JPX14: Hot-Head Bop - remove bobbing?
 JPX15: Jumpenstein - end timer when key at the end has been got?
 JPX26: Pain and Agony - remove checkpoint
-JPX33: Lago Ypacarai
+JPX33: Lago Ypacarai - NEW: possible broken tele
 JPX37: Mother Nature's Home
 LJM14: Hotlands
-LJM15: Hoots Of A Platformer (remove switch help)
+LJM15: Hoots Of A Platformer - (major changes: removed switch help. NEW: remove shotgun
 XNEO13: Valley Island
 AAC02 - remove doors, lower bridge
-JMX31 - add ranker scripts
+JMX31 - add ranker scripts - update par?
