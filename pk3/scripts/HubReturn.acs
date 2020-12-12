@@ -1,0 +1,67 @@
+#library "hubret"
+#include "zcommon.acs"
+
+#define MAX_CLIENTS 64
+#define CLIENTS_IN_GAME 0
+#define CLIENTS_SPECT 1
+#define NO_CLIENTS 2
+
+function int GetClientsState(void)
+{
+	bool spectatorsPresent = FALSE;
+	for (int i = 0; i < MAX_CLIENTS; ++i) {
+		if (PlayerIsSpectator(i)) {
+			spectatorsPresent = TRUE;
+		}
+		else if (PlayerInGame(i)) {
+			return CLIENTS_IN_GAME;
+		}
+	}
+
+	if (spectatorsPresent) {
+		return CLIENTS_SPECT;
+	}
+
+	return NO_CLIENTS;
+}
+
+script "Client Exit" (int player) DISCONNECT
+{
+	if (GetClientsState() == NO_CLIENTS) {
+		if (StrParam(n:PRINTNAME_LEVEL) != "HUB") {
+			ChangeLevel("HUB", 0, CHANGELEVEL_NOINTERMISSION);
+		}
+	}
+}
+
+script "ReturnToHub" OPEN
+{
+	if (StrParam(n:PRINTNAME_LEVEL) == "HUB") {
+		Terminate;
+	}
+
+	while (TRUE)
+	{
+		int playersState = GetClientsState();
+
+		if (playersState == CLIENTS_SPECT) {
+			int count = 5;
+			while(GetClientsState() == CLIENTS_SPECT) {
+				Print(s:"All players spectating, returning to hub in \c*",d:count);
+				if (count == 0) {
+					ChangeLevel("HUB", 0, CHANGELEVEL_NOINTERMISSION);
+					Terminate;
+				}
+				count--;
+				Delay(35);
+			}
+		}
+		else if (playersState == NO_CLIENTS) {
+			// should have been handled by disconnect script, but do this just in case
+			ChangeLevel("HUB", 0, CHANGELEVEL_NOINTERMISSION);
+			Terminate;
+		}
+
+		delay(5);
+	}
+}
