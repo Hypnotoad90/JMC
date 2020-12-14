@@ -25,15 +25,6 @@ function int GetClientsState(void)
 	return NO_CLIENTS;
 }
 
-script "Client Exit" (int player) DISCONNECT
-{
-	if (GetClientsState() == NO_CLIENTS) {
-		if (StrParam(n:PRINTNAME_LEVEL) != "HUB") {
-			ChangeLevel("HUB", 0, CHANGELEVEL_NOINTERMISSION);
-		}
-	}
-}
-
 script "ReturnToHub" OPEN
 {
 	if (StrParam(n:PRINTNAME_LEVEL) == "HUB") {
@@ -57,7 +48,9 @@ script "ReturnToHub" OPEN
 			}
 		}
 		else if (playersState == NO_CLIENTS) {
-			// should have been handled by disconnect script, but do this just in case
+			delay(2);
+			Print(s:"All players left, returning to HUB");
+			delay(35);
 			ChangeLevel("HUB", 0, CHANGELEVEL_NOINTERMISSION);
 			Terminate;
 		}
