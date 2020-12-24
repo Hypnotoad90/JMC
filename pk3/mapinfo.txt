@@ -1,6 +1,7 @@
 map HUB "Welcome To The Jumpmaze Cup"
 {
     sky1 = "stsky9", 1.5
+    music = "music/D_AATRIAL.ogg"
 }
 
 map JMC01 "(MAP03) Race to the Top!" 
