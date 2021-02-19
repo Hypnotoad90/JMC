@@ -2,6 +2,7 @@
 #include "zcommon.acs"
 
 #define HUDMSG_ADMINMSGID 250
+#define HUDMSG_ADMINMSG_LOGONLYID 294
 
 script "AdminSpeak" OPEN
 {
@@ -12,11 +13,23 @@ script "AdminSpeak" OPEN
 			currentMessage = cvarMessage;
 			SetFont("BIGFONT");
 			AmbientSound("SVMZSND1", 35);
-			HudMessageBold(s:"\cv",s:cvarMessage; HUDMSG_PLAIN | HUDMSG_LOG, HUDMSG_ADMINMSGID, CR_RED, 0.3, 0.15, 10.0);
-			Log(s:"\clAnnouncer: \c*",s:currentMessage);
+			SetHudSize(960, 720, 0);
+			HudMessageBold(s:"\cv",s:cvarMessage; HUDMSG_PLAIN, HUDMSG_ADMINMSGID, CR_RED, 480.0, 120.0, 10.0);
 			SetFont("SMALLFONT");
+			SetHudSize(0, 0, 0);
+			HudMessageBold(s:"\clAnnouncer: \c*",s:currentMessage; HUDMSG_LOG, HUDMSG_ADMINMSG_LOGONLYID, CR_RED, 2.0, 2.0, 0.01);
 		}
 
 		Delay(35);
 	}
+}
+
+script "AnnounceVictory"  (void)
+{
+    AnnouncerSound("victory", 0);
+}
+
+script "AnnounceImpressive" (void)
+{
+    AnnouncerSound("mostimpressive", 0);
 }
