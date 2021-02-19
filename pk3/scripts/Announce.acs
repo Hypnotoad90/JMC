@@ -1,0 +1,22 @@
+#library "admsg"
+#include "zcommon.acs"
+
+#define HUDMSG_ADMINMSGID 250
+
+script "AdminSpeak" OPEN
+{
+	str currentMessage = GetCVarString("jm_admin_message");
+	while (TRUE) {
+		str cvarMessage = GetCVarString("jm_admin_message");
+		if (StrCmp(currentMessage, cvarMessage) != 0) {
+			currentMessage = cvarMessage;
+			SetFont("BIGFONT");
+			AmbientSound("SVMZSND1", 35);
+			HudMessageBold(s:"\cv",s:cvarMessage; HUDMSG_PLAIN | HUDMSG_LOG, HUDMSG_ADMINMSGID, CR_RED, 0.3, 0.15, 10.0);
+			Log(s:"\clAnnouncer: \c*",s:currentMessage);
+			SetFont("SMALLFONT");
+		}
+
+		Delay(35);
+	}
+}

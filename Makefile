@@ -8,11 +8,14 @@ include utilities/common.make
 acsDir := pk3/acs
 sourceDir := pk3/scripts
 acsFiles := \
-	$(acsDir)/hubret.o
+	$(acsDir)/hubret.o \
+    $(acsDir)/admsg.o
     
 $(acsDir):
 	@$(MKDIR) $(MKDIRFLAGS) $@
 $(acsDir)/hubret.o: $(sourceDir)/HubReturn.acs | $(acsDir)
+	$(ACC) $< $@
+$(acsDir)/admsg.o: $(sourceDir)/Announce.acs | $(acsDir)
 	$(ACC) $< $@
 
 # PK3 files
