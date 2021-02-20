@@ -33,3 +33,8 @@ script "AnnounceImpressive" (void)
 {
     AnnouncerSound("mostimpressive", 0);
 }
+
+script "AnnounceWR" (void)
+{
+    AmbientSound("JM2HSWIN", 100);
+}
